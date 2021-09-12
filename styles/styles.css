@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+}
+
+
+
+
+button {
+    margin: 2rem; 
+    padding: 1rem; 
+}
+
+table, th, td {
+    border: 1px solid red; 
+    margin: 0 auto; 
+    
+}
+
+table {
+    margin-top: 3rem; 
+}
+
+tr {
+    height: 2rem;
+    width: 1rem; 
+    padding: 1rem; 
+    margin: 1rem; 
+
+}
+
+th, td {
+    width: 3rem; 
+    height: 2rem; 
+}
