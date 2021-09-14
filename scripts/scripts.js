@@ -15,8 +15,6 @@ lowerDiv.style.display="none";
 table.style.display="none";
 
 
-
-
 function validate() {
    if (billAmount.value <=0) {
       showMsg.innerText = "Please enter a valid amount!"; 
@@ -25,6 +23,7 @@ function validate() {
       lowerDiv.style.display="block";
       btnValid.style.display="none"; 
       showMsg.style.display="none"; 
+      
    }
 }
 
@@ -52,16 +51,17 @@ function calculate() {
 
 
 
-
 btnValid.addEventListener("click", validate); 
 btnCalc.addEventListener("click", calculate); 
 
 function reset() {
+   billAmount.innerText = "0";
+   givenCash.innerText = ""; 
    table.style.display="none"; 
    lowerDiv.style.display="none";   
    showMsg.style.display="none";
-   btnValid.style.display="inline"; 
-
+   btnValid.style.display="block"; 
+  
 }
 
 btnReset.addEventListener("click", reset); 
