@@ -29,10 +29,11 @@ label {
 
 input {
     width: 250px;
-    height: 40px;
+    height: 20px;
     margin: 0 auto;
     border-radius: 10px;
     font-size: medium;
+    padding: 1rem; 
 }
 
 #given-cash {
