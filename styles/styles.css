@@ -11,7 +11,7 @@ p {
     text-align: left;
 }
 
-.upper, .lower{
+.upper, #lower{
     text-align: left;
     border: 1px solid green; 
     max-width: 500px;
@@ -30,7 +30,7 @@ button {
     border: 1px solid red; 
 }
 
-#calc {
+#btn-calc {
     display: block;
     margin: 1rem auto; 
 }
