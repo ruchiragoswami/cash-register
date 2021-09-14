@@ -11,7 +11,7 @@
 <div class="main-container"> 
   <h1> Cash Register </h1>
 
-  <h2> This app brings ease to cashiers' lives by calculating the amount to be returned to customer. Also, you get the exact amount of currency notes to be given back! </h2>
+  <p> This app brings ease to cashiers' lives by calculating the amount to be returned to customer. Also, you get the exact amount of currency notes to be given back! </p>
 
   <div class="upper"> 
     <label for="bill-amount"> Enter Bill Amount: </label>
@@ -19,9 +19,40 @@
 
     <button id="validate"> Next </button>
 
-
   </div>
 
+  <div class="lower"> 
+    <lable for="given-cash"> Enter Given Cash: </lable>
+    <input type="number" id="given-cash">
+
+    <button id="calc"> Calculate </button>
+    
+  </div>
+
+  <table> 
+    <tr>
+      <th>Return Notes </th>
+      <td class="showReturn"></td>
+      <td class="showReturn"></td>
+      <td class="showReturn"></td>
+      <td class="showReturn"></td>
+      <td class="showReturn"></td>
+      <td class="showReturn"></td>
+      <td class="showReturn"></td>
+    </tr>
+    <tr>
+      <th> Notes </th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+
+  </table>
 
 
 
