@@ -14,18 +14,19 @@ showMsg.style.display="none";
 lowerDiv.style.display="none";
 table.style.display="none";
 
-
 function validate() {
-   if (billAmount.value <=0) {
-      showMsg.innerText = "Please enter a valid amount!"; 
-      showMsg.style.display="block";
-   } else {
+   if (billAmount.value > 0) {
       lowerDiv.style.display="block";
       btnValid.style.display="none"; 
-      showMsg.style.display="none"; 
-      
+      showMsg.style.display="none";       
+   } else {
+      showMsg.innerText = "Please enter a valid amount!"; 
+      showMsg.style.display="block";      
    }
 }
+
+btnValid.addEventListener("click", validate); 
+
 
 function actualCount(someAmount) {
    for (let i=0; i < ourNotes.length; i++) {
@@ -37,26 +38,31 @@ function actualCount(someAmount) {
 
 
 function calculate() {
-   if (billAmount.value > givenCash.value) {
-      showMsg.innerText = "Given cash cannot be lesser than the bill amount!";
-      showMsg.style.display="block"; 
-   } else {
+   if ( parseInt(givenCash.value) >= parseInt(billAmount.value)) {
       let difference = givenCash.value - billAmount.value; 
       showMsg.innerText=  difference + " is to be returned";
       showMsg.style.display="block"; 
       table.style.display="block"; 
-      actualCount(difference);       
+      actualCount(difference); 
+   }  else if ( billAmount.value > givenCash.value) { 
+      showMsg.innerText = "Given cash cannot be lesser than the bill amount!";
+      showMsg.style.display="block"; 
+   }  else {
+      showMsg.innerText ="Another error!"; 
+      showMsg.style.display="block"; 
    }
+   
 }
 
 
 
-btnValid.addEventListener("click", validate); 
+
+
 btnCalc.addEventListener("click", calculate); 
 
 function reset() {
-   billAmount.innerText = "0";
-   givenCash.innerText = ""; 
+   billAmount.value =  "";
+   givenCash.value = ""; 
    table.style.display="none"; 
    lowerDiv.style.display="none";   
    showMsg.style.display="none";
