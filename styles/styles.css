@@ -2,12 +2,25 @@ body {
     text-align: center;
 }
 
+.main-container {
+    max-width: 800px; 
+    margin: 0 auto; 
+}
 
+h2 {
+    text-align: left;
+}
 
+.upper {
+    text-align: center;
+}
 
 button {
-    margin: 2rem; 
+    margin-left: 2rem; 
     padding: 1rem; 
+    /* display: block;  */
+    /* margin: 2rem  0 ; */
+    border: 1px solid red; 
 }
 
 table, th, td {
